@@ -14,6 +14,10 @@ class ProductImageInline(admin.TabularInline):
 
 
 
+@admin.register(ProductImage)
+class ProductImageAdmin(admin.ModelAdmin):
+    list_display = ('id', 'image', 'product', 'description', 'order')
+
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):

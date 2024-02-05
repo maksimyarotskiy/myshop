@@ -1,0 +1,27 @@
+{% extends "store/base.html" %}
+
+{% block content %}
+    <div id="search-bar">
+        <input type="text" placeholder="Search...">
+        <button>Search</button>
+    </div>
+
+    <div id="menu">
+        <!-- dropdown menu and other elements go here -->
+        <div>Home</div>
+        <div>Category 1</div>
+        <div>Category 2</div>
+        <!-- ... -->
+    </div>
+
+    <div id="content">
+        {% for product in products %}
+            <div class="product">
+                <h3>{{ product.name }}</h3>
+                <img src="{{ product.images.first.image.url }}" alt="{{ product.name }}">
+                <p>{{ product.description }}</p>
+                <p>Price: {{ product.price }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

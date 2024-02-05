@@ -1,0 +1,27 @@
+<!doctype html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/home_style.css' %}">
+    <title>{% block title %}Store{% endblock %}</title>
+    <!-- Добавьте свои стили CSS, ссылки на библиотеки, метатеги и т.д. -->
+</head>
+<body>
+    <div id="header">
+        <h1>{% block header %}Store{% endblock %}</h1>
+        <!-- Добавьте элементы шапки, такие как меню, поиск и т.д. -->
+    </div>
+
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+
+    <div id="footer">
+        <!-- Добавьте ваш футер с дополнительной информацией -->
+    </div>
+
+    <!-- Добавьте ваши скрипты JavaScript, если необходимо -->
+</body>
+</html>
