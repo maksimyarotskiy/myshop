@@ -17,9 +17,11 @@
     <div id="content">
         {% for product in products %}
             <div class="product">
-                <h3>{{ product.name }}</h3>
-                <img src="{{ product.images.first.image.url }}" alt="{{ product.name }}">
-                <p>{{ product.description }}</p>
+                <a href="{% url 'product_detail' pk=product.pk %}">
+                    <h3>{{ product.name }}</h3>
+                    <img src="{{ product.images.first.image.url }}" alt="{{ product.name }}">
+                </a>
+                <!--<p>{{ product.description }}</p> -->
                 <p>Price: {{ product.price }}</p>
             </div>
         {% endfor %}

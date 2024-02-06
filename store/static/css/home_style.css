@@ -1,16 +1,20 @@
-/* store/static/css/home_style.css */
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
+
 #header {
     background-color: #333;
     color: #fff;
     padding: 10px;
     text-align: center;
+}
+
+.main_head_name{
+    text-decoration: none; /* Убираем подчеркивание */
+    color: inherit; /* Наследуем цвет текста от родительского элемента */
 }
 
 #search-bar {
@@ -44,3 +48,28 @@ body {
     padding: 10px;
     text-align: center;
 }
+
+/* product_detail */
+.product-detail {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.images img {
+    max-width: 200px; /* Максимальная ширина изображения */
+    max-height: 200px; /* Максимальная высота изображения */
+    object-fit: cover; /* Растягивает изображение, чтобы оно полностью заполнило заданные размеры, сохраняя при этом пропорции */
+    display: block;
+    margin: 10px auto 20px;
+    border: 2px solid #EFB12E; /* Создать рамку шириной 2px и цвета #ccc */
+    border-radius: 8px; /* Закруглить углы рамки */
+}
+/* product_detail */
+
+
+
+

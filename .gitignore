@@ -29,3 +29,4 @@ __pycache__/
 
 # Ignore pipenv virtual environment
 /.venv/
+/store/migrations/

@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/home_style.css' %}">
-    <title>{% block title %}Store{% endblock %}</title>
+    <title>{% block title %}Nice Store{% endblock %}</title>
     <!-- Добавьте свои стили CSS, ссылки на библиотеки, метатеги и т.д. -->
 </head>
 <body>
     <div id="header">
-        <h1>{% block header %}Store{% endblock %}</h1>
-        <!-- Добавьте элементы шапки, такие как меню, поиск и т.д. -->
+        <a href="{% url 'home' %}" class="main_head_name">
+        <h1>{% block header %}Nice Store{% endblock %}</h1>
+        </a>
     </div>
 
     <div id="content">
