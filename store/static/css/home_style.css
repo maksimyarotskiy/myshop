@@ -70,6 +70,81 @@ body {
 }
 /* product_detail */
 
+/* Стили для ФОТОК */
+
+/* Размер изображений */
+.image-container img {
+    width: 200px; /* Регулируйте размер по вашему желанию */
+    height: auto;
+}
+
+/* Рамки для изображений */
+.image-container img {
+    border: 1px solid #ddd; /* Цвет и ширина рамки */
+    border-radius: 5px; /* Округление углов */
+    padding: 5px; /* Отступ внутрь рамки */
+    margin-bottom: 10px; /* Дополнительный отступ между изображениями */
+}
+
+/* Стили для блока товара */
+.product {
+    margin-bottom: 20px; /* Отступ между блоками товаров */
+}
+
+
+/* Стили для РЕГИСТРАЦИИ */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.signup-form label {
+    margin-bottom: 10px;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.signup-form button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.signup-form button:hover {
+    background-color: #0056b3;
+}
 
 
 
