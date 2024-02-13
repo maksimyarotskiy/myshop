@@ -1,5 +1,7 @@
 from django.contrib import admin
 from store.models import *
+from users.models import *
+from common.models import *
 from django.contrib.admin import TabularInline
 
 
@@ -23,7 +25,7 @@ class ProductImageAdmin(admin.ModelAdmin):
 class ProductAdmin(admin.ModelAdmin):
     list_display = ('id', 'name', 'price', 'description')
     #inlines = ('DiscountInline',)
-    inlines = [DiscountInline, ProductImageInline]
+    # inlines = [DiscountInline, ProductImageInline]
 #    filter_horizontal = ('employees',)
 
 
