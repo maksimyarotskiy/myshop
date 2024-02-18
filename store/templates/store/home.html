@@ -14,9 +14,14 @@
         <div>Category 2</div>
         <div>
             {% if user.is_authenticated %}
-                <a href="{% url 'logout' %}">Logout</a>
+                <form action="{% url 'logout' %}" method="post">
+                    {% csrf_token %}
+                    <a>{{ user.username }} </a> |
+                    <button type="submit">Log out</button>
+                </form>
+
             {% else %}
-                <a href="{% url 'login' %}">Login</a>
+                <a href="{% url 'login' %}">Login</a> | <a href="{% url 'signup' %}">Sign Up</a>
             {% endif %}
         </div>
         <!-- ... -->

@@ -18,6 +18,8 @@ ALLOWED_HOSTS = ['*']
 
 
 AUTH_USER_MODEL = 'users.UserProfile'
+LOGIN_REDIRECT_URL = '/store/home/'
+LOGOUT_REDIRECT_URL = '/store/home/'
 
 # Application definition
 

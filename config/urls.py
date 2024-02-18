@@ -2,9 +2,11 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from django.contrib import admin
+from store.views import redirect_to_store_home
 from django.urls import path, include
 
 urlpatterns = [
+    path('', redirect_to_store_home),
     path('admin/', admin.site.urls),
     path('store/', include('store.urls')),
     path('users/', include('users.urls')),
