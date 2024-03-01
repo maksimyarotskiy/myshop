@@ -3,35 +3,45 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.views import LoginView
 from django.views import View
 from django.shortcuts import render, redirect
+from django import forms
+from django.views.generic import CreateView
 
+from .forms import SignUpForm
+from .models import UserProfile
 
 class LoginUser(LoginView):
     template_name = 'registration/login.html'
 
-
-
-class SignUp(View):
+class RegisterUser(CreateView):
+    form_class = SignUpForm
     template_name = 'registration/signup.html'
+    extra_context = {'title': "Registration"}
 
-    def get(self, request):
-        context = {
-            'form': UserCreationForm()
-        }
-        return render(request, self.template_name, context)
 
-    def post(self, request):
-        form = UserCreationForm(request.POST)
-        if form.is_valid():
-            form.save()
-            username = form.cleaned_data.get('username')
-            password = form.cleaned_data.get('password')
-            user = authenticate(username=username, password=password)
-            login(request, user)
-            return redirect('home')
-        else:
-            context = {
-                'form': form
-            }
-            return render(request, self.template_name, context)
+
+
+# class SignUp(View):
+#     template_name = 'registration/signup.html'
+#
+#     def get(self, request):
+#         context = {
+#             'form': UserCreationForm()
+#         }
+#         return render(request, self.template_name, context)
+#
+#     def post(self, request):
+#         form = UserCreationForm(request.POST)
+#         if form.is_valid():
+#             form.save()
+#             username = form.cleaned_data.get('username')
+#             password = form.cleaned_data.get('password')
+#             user = authenticate(username=username, password=password)
+#             login(request, user)
+#             return redirect('home')
+#         else:
+#             context = {
+#                 'form': form
+#             }
+#             return render(request, self.template_name, context)
 
 
