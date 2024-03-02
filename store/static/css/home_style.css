@@ -17,6 +17,7 @@ body {
     color: inherit; /* Наследуем цвет текста от родительского элемента */
 }
 
+
 #search-bar {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -112,6 +113,7 @@ body {
 .signup-form {
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
 }
 
 .signup-form h2 {
@@ -131,6 +133,7 @@ body {
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    box-sizing: border-box;
 }
 
 .signup-form button {
@@ -147,4 +150,34 @@ body {
 }
 
 
+/* Search-bar */
+.main-search-bar {
+    display: flex;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.main-search-bar input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+}
+
+.main-search-bar button {
+    padding: 10px 20px;
+    background-color: #333333;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.main-search-bar button:hover {
+    background-color: #665f5f;
+}
+/* Search-bar */
 
