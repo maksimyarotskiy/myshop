@@ -181,3 +181,33 @@ body {
 }
 /* Search-bar */
 
+
+/* Button logout */
+.button-logout {
+    background-color: #f44336;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button-logout:hover {
+    background-color: #e53935; /* Darker red on hover */
+}
+
+a {
+    color: #4CAF50; /* Green */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #3e8e41; /* Darker green on hover */
+}
+
+/* Button logout */
+

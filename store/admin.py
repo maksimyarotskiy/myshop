@@ -39,7 +39,8 @@ class ReviewAdmin(admin.ModelAdmin):
 
 @admin.register(UserProfile)
 class UserProfileAdmin(admin.ModelAdmin):
-    list_display = ('id', 'address', 'phone_number', 'cart')
+    list_display = ('id', 'username')
+    list_display_links = ('id', 'username')
 
 @admin.register(Cart)
 class CartAdmin(admin.ModelAdmin):
