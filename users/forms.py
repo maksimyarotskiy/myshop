@@ -19,3 +19,22 @@ class SignUpForm(UserCreationForm):
     class Meta:
         model = UserProfile
         fields = ('username', 'email', 'password1', 'password2')
+
+
+class ProfileUserForm(forms.ModelForm):
+    username = forms.CharField(disabled=True, label='login', widget=forms.TextInput())
+    email = forms.CharField(disabled=True, label='email', widget=forms.TextInput())
+
+    class Meta:
+        model = get_user_model()
+        fields = ['username', 'email', 'address', 'phone_number']
+        labels = {
+            'address': 'Address',
+            'phone_number': 'Phone_number',
+        }
+        widgets = {
+            'address': forms.TextInput(),
+            'phone_number': forms.TextInput(),
+        }
+
+

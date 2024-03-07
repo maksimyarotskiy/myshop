@@ -1,13 +1,14 @@
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, get_user_model
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.views import LoginView
 from django.urls import reverse_lazy
 from django.views import View
 from django.shortcuts import render, redirect
 from django import forms
-from django.views.generic import CreateView
+from django.views.generic import CreateView, UpdateView
 
-from .forms import SignUpForm
+from .forms import SignUpForm, ProfileUserForm
 from .models import UserProfile
 
 class LoginUser(LoginView):
@@ -26,3 +27,14 @@ class RegisterUser(CreateView):
         return response
 
 
+class ProfileUser(LoginRequiredMixin, UpdateView):
+    model = get_user_model()
+    form_class = ProfileUserForm
+    template_name = 'profile.html'
+    extra_context = {'title': 'Profile'}
+
+    def get_success_url(self):
+        return reverse_lazy('users:profile')
+
+    def get_object(self, queryset=None):
+        return self.request.user
