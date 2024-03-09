@@ -50,6 +50,28 @@ body {
     text-align: center;
 }
 
+.footer {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.footer-heading {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-item {
+    margin-bottom: 5px;
+}
+
 /* product_detail */
 .product-detail {
     max-width: 800px;
@@ -289,3 +311,50 @@ a:hover {
 }
 
 /* Button logout */
+
+/* Pussword change styles */
+.container-password-change {
+    max-width: 500px;
+    margin: 40px auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для заголовка */
+h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Стили для полей ввода */
+.password-change-form-custom {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+}
+
+/* Стили для кнопки "Save Changes" */
+.button-save-password-changes {
+    background-color: #b59233;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.button-save-password-changes:hover {
+    background-color: #806622;
+}
+/* Pussword change styles end */
