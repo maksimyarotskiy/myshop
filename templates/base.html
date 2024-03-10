@@ -10,9 +10,8 @@
 <body>
     <div id="header">
         <a href="{% url 'home' %}" class="main_head_name">
-        <h1>{% block header %}Nice Store{% endblock %}</h1>
+            <h1>{% block header %}Nice Store{% endblock %}</h1>
         </a>
-
     </div>
 
     <div id="content">
@@ -27,6 +26,6 @@
         </ul>
     </div>
 
-
+    <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>

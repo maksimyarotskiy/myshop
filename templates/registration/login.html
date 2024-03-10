@@ -1,13 +1,22 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1> Login </h1>
-    {% if form.errors %}
-        <p>{{ form.errors }}</p>
-    {% endif %}
-    <form action="{% url 'users:login' %}" method="post">
-        {{ form }}
-        {% csrf_token %}
-        <button type="submit">Submit</button>
-    </form>
+    <div class="login-container">
+        <h1 class="login-heading">Login</h1>
+        {% if form.errors %}
+            <p class="login-error">{{ form.errors }}</p>
+        {% endif %}
+        <form action="{% url 'users:login' %}" method="post" class="login-form">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="id_username" class="login-label">Username</label>
+                <input type="text" name="username" id="id_username" class="login-input">
+            </div>
+            <div class="form-group">
+                <label for="id_password" class="login-label">Password</label>
+                <input type="password" name="password" id="id_password" class="login-input">
+            </div>
+            <button type="submit" class="login-button">Submit</button>
+        </form>
+    </div>
 {% endblock %}

@@ -12,6 +12,11 @@ body {
     text-align: center;
 }
 
+#content {
+    margin-bottom: 140px; /* Высота футера */
+}
+
+
 .main_head_name{
     text-decoration: none; /* Убираем подчеркивание */
     color: inherit; /* Наследуем цвет текста от родительского элемента */
@@ -44,24 +49,37 @@ body {
 }
 
 #footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 1px 10px;
+    text-align: center;
+}
+
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     background-color: #333;
     color: #fff;
     padding: 10px;
     text-align: center;
+    transition: visibility 0.5s, opacity 0.5s;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 9999; /* Установите z-index на самый верхний уровень, чтобы футер был поверх других элементов */
 }
 
-.footer {
-    background-color: #f0f0f0;
-    padding: 20px;
-    text-align: center;
-    font-size: 14px;
-    color: #666;
+.footer.show {
+    visibility: visible;
+    opacity: 1;
 }
 
-.footer-heading {
-    font-weight: bold;
-    margin-bottom: 10px;
-}
 
 .contact-list {
     list-style: none;
@@ -75,7 +93,7 @@ body {
 /* product_detail */
 .product-detail {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 50px auto;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -160,7 +178,7 @@ body {
 
 .signup-form button {
     padding: 10px;
-    background-color: #007bff;
+    background-color: #75B703;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -168,7 +186,7 @@ body {
 }
 
 .signup-form button:hover {
-    background-color: #0056b3;
+    background-color: #8BDA05;
 }
 
 
@@ -205,9 +223,9 @@ body {
 
 
 /* Стили для формы профиля пользователя */
-.container {
+.container-profile {
     max-width: 500px;
-    margin: 0 auto;
+    margin: 40px auto;
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 10px;
@@ -238,7 +256,7 @@ input[type="password"] {
 
 /* Стили для кнопки "Save Changes" */
 .btn-primary {
-    background-color: #007bff;
+    background-color: #75B703;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -251,13 +269,41 @@ input[type="password"] {
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
+    background-color: #8BDA05;
 }
+/* Стили для кнопки "Save Changes" end */
+
+/* Стили для кнопки "Change-password" */
+.button-password-change-class {
+    background-color: #75B703;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.button-password-change-class:hover {
+    background-color: #8BDA05;
+    color: white;
+}
+
+.centered {
+    text-align: center;
+}
+
+/* Стили для кнопки "Change-password" end */
 
 /* Стили для кнопки logout */
 .button-logout {
     background-color: #A52738;
     border: none;
+    border-radius: 10px;
     color: white;
     padding: 10px 20px;
     text-align: center;
@@ -358,3 +404,89 @@ h1 {
     background-color: #806622;
 }
 /* Pussword change styles end */
+
+/* Login */
+.login-container {
+    max-width: 500px;
+    margin: 40px auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-heading {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login-input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+}
+
+.login-button {
+    background-color: #806622;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #c4ad37;
+}
+
+.login-error {
+    color: #ff0000;
+    margin-bottom: 10px;
+}
+/* Login end */
+
+/* Styles for password_change_done.html */
+.container-password-change-done {
+    max-width: 500px;
+    margin: 100px auto;
+    background-color: #f9f9f9;
+    padding: 80px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.success-message {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #75B703;
+}
+
+.success-description {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.button-go-to-profile {
+    background-color: #ad9932;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.button-go-to-profile:hover {
+    background-color: #c4ad37;
+}
+/* Styles for password_change_done.html end */
+

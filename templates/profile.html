@@ -3,7 +3,7 @@
 {% block title %}Profile{% endblock %}
 
 {% block content %}
-    <div class="container">
+    <div class="container-profile">
         <h1>{{ title }}</h1>
         <form method="post" class="profile-form">
             {% csrf_token %}
@@ -27,5 +27,7 @@
         </form>
     </div>
 
-    <p><a href="{% url 'users:password_change' %}">Change password</a></p>
+    <div class="centered">
+        <p><a href="{% url 'users:password_change' %}" class="button-password-change-class">Change password</a></p>
+    </div>
 {% endblock %}
