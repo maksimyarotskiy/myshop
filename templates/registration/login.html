@@ -17,6 +17,7 @@
                 <input type="password" name="password" id="id_password" class="login-input">
             </div>
             <button type="submit" class="login-button">Submit</button>
+            <a href="{% url 'users:password_reset' %}">Forgot a password ?</a>
         </form>
     </div>
 {% endblock %}
