@@ -192,21 +192,27 @@ body {
 
 /* Search-bar */
 .main-search-bar {
-    display: flex;
-    align-items: center;
-    max-width: 400px;
+    display: grid;
+    grid-template-columns: auto min-content; /* Одна колонка будет занимать всё доступное пространство, а другая будет максимально уменьшена до размера контента */
+    align-items: center; /* Выравнивание элементов по вертикали */
+    max-width: 600px;
     margin: 0 auto;
 }
 
-.main-search-bar input[type="text"] {
-    flex: 1;
+.form-search-bar {
+    display: grid;
+    grid-template-columns: auto min-content; /* Одна колонка будет занимать всё доступное пространство, а другая будет максимально уменьшена до размера контента */
+    align-items: center; /* Выравнивание элементов по вертикали */
+}
+
+.form-search-bar input[type="text"] {
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px 0 0 5px;
     font-size: 16px;
 }
 
-.main-search-bar button {
+.form-search-bar button {
     padding: 10px 20px;
     background-color: #333333;
     color: #fff;
@@ -216,10 +222,11 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.main-search-bar button:hover {
+.form-search-bar button:hover {
     background-color: #665f5f;
 }
 /* Search-bar */
+
 
 
 /* Стили для формы профиля пользователя */
